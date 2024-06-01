@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    height:100vh;
+    width:100vw;
+    background-color:black;
+    overflow:hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+div#root{
+    width:inherit;
+    height:inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face{
+    font-family: mvboli;
+    src: url('fonts/mvboli.ttf');
 }
 
-.App-link {
-  color: #61dafb;
+.background{
+    width:inherit;
+    height:inherit;
+    background-color:black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loader{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.startBtn-container{
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+    width: inherit;
+    justify-content: center;
+}
+
+#start{
+    font-family: mvboli;
+    font-size: max(4vw, 45px);
+    background: none;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+#start:hover {
+    color:#AE9B7D;
+}
+
+#soundText{
+    font-family: "Verdana";
+    font-style: italic;
+    font-size: max(0.5vw, 12px);
+    color: #bebebe;
+}
+
+canvas{
+    z-index: -1;
 }
